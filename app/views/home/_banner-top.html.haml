@@ -1,0 +1,56 @@
+.banner-top
+  .slider
+    .callbacks_container
+      %ul#slider4.rslides.callbacks.callbacks1
+        %li
+          .w3layouts-banner-top.jarallax
+            .agileinfo-dot
+              .container
+                .agileits-banner-info
+                  %h3 Lorem ipsum
+                  %h6 Mauris nisl nunc, feugiat a nulla euismod
+                  %p Nulla eu erat risus. Curabitur in purus porta, suscipit nisi sit amet, maximus purus. Fusce nulla nibh, porttitor eu velit id, cursus mattis nibh. Phasellus dapibus aliquam urna in maximus.
+                  .w3-button
+                    %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#"} More
+        %li
+          .w3layouts-banner-top.w3layouts-banner-top1.jarallax
+            .agileinfo-dot
+              .container
+                .agileits-banner-info
+                  %h3 Donec posuere
+                  %h6 Vivamus facilisis dolor ac sapien pharetra
+                  %p Donec luctus faucibus lacus accumsan pellentesque. Vestibulum volutpat dignissim sem id dignissim. Nunc sit amet risus nec diam porttitor tristique et eu lorem. Morbi ut ullamcorper eros
+                  .w3-button
+                    %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#"} More
+        %li
+          .w3layouts-banner-top.w3layouts-banner-top2.jarallax
+            .agileinfo-dot
+              .container
+                .agileits-banner-info
+                  %h3 Integer accumsan
+                  %h6 Nunc dapibus euismod purus, sed molestie
+                  %p Nulla a vehicula urna, in mattis nisl. Nulla facilisi. Praesent at nibh et ligula imperdiet vehicula. Sed posuere, massa semper ornare laoreet, ipsum sem faucibus velit, non tempus mi felis
+                  .w3-button
+                    %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#"} More
+    .clearfix
+    %script{:src => "js/responsiveslides.min.js"}
+    :javascript
+      // You can also use "$(window).load(function() {"
+      $(function () {
+        // Slideshow 4
+        $("#slider4").responsiveSlides({
+      	auto: true,
+      	pager:true,
+      	nav:true,
+      	speed: 500,
+      	namespace: "callbacks",
+      	before: function () {
+      	  $('.events').append("<li>before event fired.</li>");
+      	},
+      	after: function () {
+      	  $('.events').append("<li>after event fired.</li>");
+      	}
+        });
+
+      });
+    / banner Slider starts Here

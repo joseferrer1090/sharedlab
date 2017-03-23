@@ -1,0 +1,72 @@
+/ testimonial
+#testimonial.jarallax.testimonial
+  .testimonial-dot
+    .container
+      .wthree-heading.testimonial-heading
+        %h3 Services Overview
+        %h5 Vivamus facilisis dolor ac sapien pharetra
+      .w3-agile-testimonial
+        .slider
+          .callbacks_container
+            %ul#slider3.rslides.callbacks.callbacks1
+              %li
+                .testimonial-img-grid
+                  .testimonial-img.t-img1
+                    %img{:alt => "", :src => "images/14.jpg"}/
+                  .testimonial-img
+                    %img{:alt => "", :src => "images/15.jpg"}/
+                  .testimonial-img.t-img2
+                    %img{:alt => "", :src => "images/16.jpg"}/
+                  .clearfix
+                .testimonial-img-info
+                  %p Nunc interdum elit nec sapien vehicula, ut blandit nulla ultrices. Sed ullamcorper metus eget efficitur rutrum. Aliquam a nunc odio. Aenean fermentum finibus efficitur.
+                  %h5 Peter Guptill
+                  %h6 Proin blandit
+              %li
+                .testimonial-img-grid
+                  .testimonial-img.t-img1
+                    %img{:alt => "", :src => "images/15.jpg"}/
+                  .testimonial-img
+                    %img{:alt => "", :src => "images/16.jpg"}/
+                  .testimonial-img.t-img2
+                    %img{:alt => "", :src => "images/14.jpg"}/
+                  .clearfix
+                .testimonial-img-info
+                  %p Morbi est est, mollis id diam a, pellentesque dignissim lorem. Sed malesuada sed lacus sit amet vestibulum. Sed nibh purus, egestas eu orci vel, mollis interdum orci.
+                  %h5 Mary Jane
+                  %h6 Lorem ipsum
+              %li
+                .testimonial-img-grid
+                  .testimonial-img.t-img1
+                    %img{:alt => "", :src => "images/16.jpg"}/
+                  .testimonial-img
+                    %img{:alt => "", :src => "images/14.jpg"}/
+                  .testimonial-img.t-img2
+                    %img{:alt => "", :src => "images/15.jpg"}/
+                  .clearfix
+                .testimonial-img-info
+                  %p Proin blandit rhoncus metus porta tristique. Praesent suscipit in erat a tempor. Nullam tempor lectus ex, a auctor orci ultricies ac. Mauris sapien neque, condimentum sit
+                  %h5 Steven Wilson
+                  %h6 Proin blandit
+          .clearfix
+          :javascript
+            // You can also use "$(window).load(function() {"
+            $(function () {
+              // Slideshow 4
+              $("#slider3").responsiveSlides({
+            	auto: true,
+            	pager:false,
+            	nav:false,
+            	speed: 500,
+            	namespace: "callbacks",
+            	before: function () {
+            	  $('.events').append("<li>before event fired.</li>");
+            	},
+            	after: function () {
+            	  $('.events').append("<li>after event fired.</li>");
+            	}
+              });
+
+            });
+              / banner Slider starts Here
+            / //testimonial

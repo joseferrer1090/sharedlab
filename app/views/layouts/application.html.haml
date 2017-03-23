@@ -1,0 +1,56 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Sharedlab
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+
+    = yield
+:javascript
+  /* init Jarallax */
+  $('.jarallax').jarallax({
+  	speed: 0.5,
+  	imgWidth: 1366,
+  	imgHeight: 768
+  })
+:javascript
+  $(document).ready(function() {
+  	/*
+  		var defaults = {
+  		containerID: 'toTop', // fading element id
+  		containerHoverID: 'toTopHover', // fading element hover id
+  		scrollSpeed: 1200,
+  		easingType: 'linear'
+  		};
+  	*/
+
+  	$().UItoTop({ easingType: 'easeOutQuart' });
+
+  	});
+:javascript
+  $(window).load(function(){
+    $('#carousel').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: true,
+      slideshow: false,
+      itemWidth: 102,
+      itemMargin: 5,
+      asNavFor: '#slider'
+    });
+
+    $('#slider').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: true,
+      slideshow: true,
+      sync: "#carousel",
+      start: function(slider){
+        $('body').removeClass('loading');
+      }
+    });
+  });
+

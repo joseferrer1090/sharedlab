@@ -1,0 +1,30 @@
+.banner
+  .header
+    .container
+      %nav.navbar.navbar-default
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          .w3layouts-logo
+            %h1
+              %a{:href => "index.html"}
+                Bank
+                %span Online
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse.nav-wil
+          %nav
+            %ul.nav.navbar-nav
+              %li.active
+                %a{:href => "index.html"} Home
+              %li
+                %a.scroll{:href => "#about"} About
+              %li
+                %a.scroll{:href => "#markets"} Markets
+              %li
+                %a.scroll{:href => "#services"} Services
+              %li
+                %a.scroll{:href => "#blog"} Blog
+              %li
+                %a.scroll{:href => "#mail"} Mail Us
